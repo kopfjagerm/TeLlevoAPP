@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+      
+    </ion-buttons>
+    <ion-title>busca tu Viaje</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+
+
+<div>
+  <ion-searchbar showCancelButton="focus" placeholder = "Busca un destino" ></ion-searchbar>
+</div>
+
+
+<ion-content>
+ 
+
+  <div class = "viajes">
+
+
+    <ion-card-content *ngFor="let viaje of viajes; index as i" >
+          <ion-card-title>
+            {{i+1}} Viaje a {{viaje.lugar_destino}}
+          </ion-card-title>
+          
+          <ul>
+            <li> Destino : {{viaje.lugar_destino}}</li>
+            <li>Hora de salida : {{viaje.horario_salida}}</li>
+            <li>Costo por Persona: {{viaje.costo_por_persona}}</li>
+          </ul>
+          <ion-button color="warning" fill="outline"  expand="block" size="small" (click) = "btnInscribirViaje()" >Inscribirse</ion-button>
+        </ion-card-content>
+
+  </div>
+
+<div id="Actualizar-Viajes">
+  <div>
+    <ion-button shape="round" color="warning" expand="block" (click)="btnObtenerViaje()">Actualizar Viajes</ion-button>
+  </div>
+</div>
+     
+</ion-content>
+
+<!--
+  <ion-img src = "assets//autos/auto2.jpg"> </ion-img>
+-->
+

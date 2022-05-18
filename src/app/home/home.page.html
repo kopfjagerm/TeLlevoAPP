@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      TeLLevo
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="login"></ion-back-button>
+      
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-chip>
+    <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <ion-label> {{datosUsuario.nombre}} </ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+  
+  <!--
+  <div>
+    <p>STORAGE  <br> Nombre: {{datosUsuario.nombre}}</p>
+    <p>apellidos {{datosUsuario.apellidos}}</p>
+    <p>codigo {{datosUsuario.codigo}}</p>
+    <p>correo {{datosUsuario.correo}}</p>
+  </div>
+  -->
+
+
+
+
+
+  <div id= "container-buttom">
+
+    <ion-button color="warning" shape="round"  size="medium" expand="block" href = "/crear-viaje">Crear Viaje</ion-button>
+
+    <ion-button color="warning" shape="round"  size="medium" expand="block" href = "/buscar-viaje"> Buscar Viajes</ion-button>
+
+  </div>
+
+
+</ion-content>
+
